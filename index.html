@@ -1,35 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Tailwind CSS and Daisy UI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="./images/bus-icon.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./images/bus-icon.png"
+      type="image/x-icon"
+    />
     <!-- Title -->
     <title>Bus Ticker Landing Page</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header Section -->
-    <header>
-        <!-- Navber Section -->
-        <nav>
-
-        </nav>
-        <div>
-
+    <header class="container mx-auto mt-8">
+      <!-- Navber Section -->
+      <nav>
+        <!-- Navbar for Desktop and Tablet -->
+        <div class="hidden sm:block sm:flex justify-between items-center">
+          <h1 class="text-4xl font-bold">P-Ticket</h1>
+          <ul class="flex justify-between items-center text-lg gap-6">
+            <li>Home</li>
+            <li>About</li>
+            <li>Destination</li>
+            <li>Search</li>
+          </ul>
+          <button
+            class="btn btn-outline text-green-400 font-bold text-xl hover:text-green-400 hover:bg-gray-100"
+          >
+            Bus <img class="hover:" src="./images/bus-icon.png" alt="" />
+          </button>
         </div>
-
+        <!-- Navbar for Mobile -->
+        <div
+          class="block flex justify-between items-center sm:hidden navbar bg-base-100"
+        >
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h7"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li class="hover:text-green-400"><a>Home</a></li>
+                <li class="hover:text-green-400"><a>About</a></li>
+                <li class="hover:text-green-400"><a>Destination</a></li>
+                <li class="hover:text-green-400"><a>Search</a></li>
+              </ul>
+            </div>
+            <h1 class="text-2xl font-bold">P-Ticket</h1>
+          </div>
+          <div class="navbar-end">
+            <button
+              class="btn btn-outline text-green-400 font-bold text-xl hover:text-green-400 hover:bg-gray-100"
+            >
+              Bus <img class="hover:" src="./images/bus-icon.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </nav>
+      <!-- Banner Section -->
+      <section class="container mx-auto mt-12">
+        <div
+          class="hero h-[500px] rounded-xl"
+          style="
+            background-image: url('./images/banner.png');
+          "
+        >
+          <div class="hero-overlay bg-opacity-10 rounded-xl"></div>
+          <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-xl">
+              <h1 class="mb-5 text-5xl  font-bold">End-to-End Travel with <br> <span class="text-[#1DD100]">P Paribahan</span></h1>
+              <p class="mb-5">
+                Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .
+              </p>
+              <button class="btn btn-success bg-[#1DD100ff] text-lg font-bold">Buy Tickets</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </header>
     <!-- Main Section -->
-    <main>
-
-    </main>
+    <main></main>
     <!-- Footer Section -->
-    <footer>
-
-    </footer>
-</body>
+    <footer></footer>
+  </body>
 </html>
