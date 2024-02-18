@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="cupcake">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,10 +28,10 @@
         <div class="hidden sm:block sm:flex justify-between items-center">
           <h1 class="text-4xl font-bold">P-Ticket</h1>
           <ul class="flex justify-between items-center text-lg gap-6">
-            <li>Home</li>
-            <li>About</li>
-            <li>Destination</li>
-            <li>Search</li>
+            <li class="hover:text-green-400 cursor-pointer">Home</li>
+            <li class="hover:text-green-400 cursor-pointer">About</li>
+            <li class="hover:text-green-400 cursor-pointer">Destination</li>
+            <li class="hover:text-green-400 cursor-pointer">Search</li>
           </ul>
           <button
             class="btn btn-outline text-green-400 font-bold text-xl hover:text-green-400 hover:bg-gray-100"
@@ -85,26 +85,134 @@
       <!-- Banner Section -->
       <section class="container mx-auto mt-12">
         <div
-          class="hero h-[500px] rounded-xl"
+          class="hero h-[600px] w-full rounded-xl bg-cover"
           style="
             background-image: url('./images/banner.png');
+            object-fit: cover;
           "
         >
           <div class="hero-overlay bg-opacity-10 rounded-xl"></div>
           <div class="hero-content text-center text-neutral-content">
             <div class="max-w-xl">
-              <h1 class="mb-5 text-5xl  font-bold">End-to-End Travel with <br> <span class="text-[#1DD100]">P Paribahan</span></h1>
+              <h1 class="mb-5 text-5xl font-bold">
+                End-to-End Travel with <br />
+                <span class="text-[#1DD100]">P Paribahan</span>
+              </h1>
               <p class="mb-5">
-                Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .
+                Yes, you can run unit tests and view the results directly within
+                the app. The integrated testing features allow for a streamlined
+                .
               </p>
-              <button class="btn btn-success bg-[#1DD100ff] text-lg font-bold">Buy Tickets</button>
+              <button
+                class="btn btn-success bg-[#1DD100ff] hover:bg-[#1DD100ff] border-none text-lg font-bold"
+              >
+                Buy Tickets
+              </button>
             </div>
           </div>
         </div>
       </section>
     </header>
     <!-- Main Section -->
-    <main></main>
+    <main class="container mx-auto">
+      <section class="mt-14">
+        <h1 class="text-4xl font-bold text-center mb-12">
+          Best offers for you
+        </h1>
+        <div
+          class="flex flex-col md:flex-row justify-center gap-8 items-center"
+        >
+          <div class="card w-96 bg-[#FFBF0F] flex gap-8 text-neutral-content">
+            <div class="card-body">
+              <div class="items-center flex justify-between">
+                <div class="text-black">
+                  <h1 class="text-3xl font-bold">15% OFF</h1>
+                  <h3 class="font-bold">on your next purchase</h3>
+                  <p class="text-[#000]">use by January 2024</p>
+                </div>
+                <div class="text-black">
+                  <h1 class="text-2xl font-bold">NEW15</h1>
+                  <p class="text-[#000]">Coupon Code</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card w-96 bg-[#FFBF0F] flex gap-8 text-neutral-content">
+            <div class="card-body">
+              <div class="items-center flex justify-between">
+                <div class="text-black">
+                  <h1 class="text-3xl font-bold">20% OFF</h1>
+                  <h3 class="font-bold">on your next purchase</h3>
+                  <p class="text-[#000]">use by January 2024</p>
+                </div>
+                <div class="text-black">
+                  <h1 class="text-2xl font-bold">Couple 20</h1>
+                  <p class="text-[#000]">Coupon Code</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center mt-12">
+          <button
+            class="btn btn-outline hover:border-none hover:bg-[#1DD100] text-xl text-green-400"
+          >
+            See All Offers
+          </button>
+        </div>
+      </section>
+      <section class="mt-20 border-t-2 border-green-500 rounded-2xl">
+        <h1 class="text-4xl mt-6 font-bold text-center mb-12">P.H Paribahan</h1>
+        <p class="text-center text-lg">
+          Yes, you can run unit tests and view the results directly within the
+          app. The integrated <br />
+          testing features allow for a streamlined .
+        </p>
+        <div class="flex justify-between mt-12 bg-white rounded-2xl mb-8 p-12">
+          <div class="w-[70%] ">
+            <div class="flex justify-between mb-6">
+              <div class="flex justify-center items-center gap-3">
+                <img src="./images/bus-logo.png" alt="" />
+                <div>
+                  <p class="text-2xl font-bold">Greenline Paribahan</p>
+                  <p>Coach-009-WEB ! AC_Business</p>
+                </div>
+              </div>
+              <div class="text-[#1DD100] p-4 gap-2 bg-[#1DD10026] rounded-xl flex justify-center items-center">
+                <img src="./images/seat-green.png" alt="" />
+                <p>40 Seats left</p>
+              </div>
+            </div>
+            <div class="rounded-xl p-6 bg-[#0000001A]">
+              <div class="flex justify-between">
+                <div>Route</div>
+                <div class="font-medium">Dhaka-Sylhet</div>
+              </div>
+              <hr class="border-dashed bg-[#00000036] mb-4 mt-4">
+              <div class="flex justify-between">
+                <div>Departure Time</div>
+                <div class="font-medium">9:00 PM</div>
+              </div>
+              <hr class="border-dashed bg-[#00000036] mb-4 mt-4">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="text-center bg-[#00000026] rounded-xl px-2 py-3 ">Boarding Poing-Laxmipur</div>
+                <div class="text-center bg-[#00000026] rounded-xl px-2 py-3 ">Dropping Point-Bogura</div>
+                <div class="text-center md:col-span-2 lg:col-span-1 flex justify-center w-full ">
+                  <div class="bg-[#00000026] px-2 py-3 rounded-xl w-full">Est.Time-11 Hour</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="flex flex-col justify-center items-center text-center w-[20%]">
+            <img class="w-[48px]" src="./images/fare.png" alt="">
+            <h1 class="text-2xl font-bold  mt-3">550 Taka</h1>
+            <p class="text-xl text-[#00000036]">Per Seat</p>
+          </div>
+        </div>
+        <div></div>
+      </section>
+    </main>
     <!-- Footer Section -->
     <footer></footer>
   </body>
