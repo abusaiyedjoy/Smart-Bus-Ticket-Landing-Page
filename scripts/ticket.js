@@ -2,7 +2,7 @@
 const seats = document.querySelectorAll(".seat");
 let totalPrice = 0;
 let Count = 0;
-let countDown = 40;
+let countDown = 36;
 let grandTotal = 0;
 let ticketCount = [];
 const seatlist = [];
@@ -19,7 +19,6 @@ for (let i = 0; i < seats.length; i++) {
       return alert("Already Selected Choose Another One")
     }
     seatlist.push(seat.innerText);
-    console.log(seatlist);
     //   Seat selected
     seat.classList.add("bg-[#1DD100]");
     ticketCount.push(Math.floor(Math.random(4) * 10));
@@ -57,7 +56,7 @@ for (let i = 0; i < seats.length; i++) {
     document.getElementById("Price").appendChild(seatPrice);
   });
 }
-
+// Coupon Code Functionality
 const conpunInput = document.getElementById("Input");
 const applyButton = document.getElementById("ApplyButton");
 conpunInput.addEventListener("input", function () {
@@ -67,6 +66,7 @@ conpunInput.addEventListener("input", function () {
     applyButton.setAttribute("disabled", "");
   }
 });
+// Coupon Code validation
 let discountAmount = 0;
 const discountelement = document.getElementById("discount-element");
 discountelement.style.display = "none";
@@ -75,23 +75,20 @@ applyButton.addEventListener("click", function () {
   document.getElementById("input-field").style.display = "none";
   if (conpunInput.value === "NEW15") {
     discountAmount = totalPrice * 0.15;
-    console.log(grandTotal);
 
     grandTotal = grandTotal - discountAmount;
   } else if (conpunInput.value === "Couple 20") {
     discountAmount = totalPrice * 0.2;
-    console.log(grandTotal);
     grandTotal = grandTotal - discountAmount;
   }
   grandTotalElement.innerText = grandTotal;
   document.getElementById("discount-amount").innerText = discountAmount;
 });
-
+// Confirm button functionality
 const confirmButton = document.getElementById("confirm-button");
 const phoneNumber = document.getElementById("phone");
 phoneNumber.addEventListener("input", function () {
   const phone = phoneNumber.value;
-  console.log(phone);
   if (phone.length === 11) {
     confirmButton.removeAttribute("disabled");
   } else {
